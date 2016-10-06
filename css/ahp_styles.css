@@ -1,0 +1,169 @@
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%; }
+
+body {
+  background: #3e1e09;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; }
+
+.index .col-md-4 {
+  padding-top: 15em; }
+  .index .col-md-4 .intro {
+    position: relative;
+    padding: 2em 4em 4em 6em;
+    background-color: #fdf5e0; }
+    .index .col-md-4 .intro .name-group {
+      margin-bottom: 3em; }
+    .index .col-md-4 .intro .break-line {
+      background-color: wheat;
+      height: 2px;
+      margin: 1em 0;
+      margin-left: -56px;
+      width: 296px; }
+    .index .col-md-4 .intro .start-btn {
+      position: absolute;
+      top: 11em;
+      position: absolute;
+      padding: 0.7em 1.2em;
+      border-radius: 2px;
+      font-size: 1.5em;
+      margin-right: 1em;
+      color: white;
+      overflow: hidden;
+      left: 20%;
+      z-index: 1; }
+      .index .col-md-4 .intro .start-btn a {
+        z-index: 10;
+        padding: 0.7em 1.2em;
+        color: white;
+        background-color: #3e1e09;
+        text-decoration: none; }
+      .index .col-md-4 .intro .start-btn:hover:after {
+        background: white;
+        content: "";
+        height: 300px;
+        right: -300px;
+        opacity: .2;
+        position: absolute;
+        top: -200px;
+        -webkit-transform: rotate(-35deg);
+        transform: rotate(-35deg);
+        transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        animation-name: group-button-left-run;
+        animation-duration: 0.5s;
+        width: 300px;
+        z-index: 1;
+        animation-timing-function: ease; }
+@keyframes group-button-left-run {
+  from {
+    right: 150px;
+    top: -200px; }
+  to {
+    right: -300px;
+    top: -200px; } }
+      .index .col-md-4 .intro .start-btn:hover {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1); }
+
+.setup, .estimate-an, .result {
+  background-color: #fdf5e0;
+  margin-top: 3em;
+  padding: 3em;
+  padding-bottom: 6em; }
+  .setup h1, .setup h2, .setup h3, .estimate-an h1, .estimate-an h2, .estimate-an h3, .result h1, .result h2, .result h3 {
+    color: #3d4b32;
+    font-weight: bold; }
+  .setup .break-line-title, .estimate-an .break-line-title, .result .break-line-title {
+    height: 4px;
+    border-top: 1px solid #3d4b32;
+    border-bottom: 2px solid #3d4b32; }
+  .setup fieldset, .estimate-an fieldset, .result fieldset {
+    margin-top: 2em;
+    background-color: #f7ebbb;
+    border: none;
+    box-shadow: 2px 2px 5px #888888; }
+    .setup fieldset legend, .estimate-an fieldset legend, .result fieldset legend {
+      padding: 0.5em;
+      width: 20%;
+      box-shadow: 2px 2px 5px #888888; }
+    .setup fieldset input, .estimate-an fieldset input, .result fieldset input {
+      border-radius: 5px; }
+    .setup fieldset .newOption #addMultiOptions, .estimate-an fieldset .newOption #addMultiOptions, .result fieldset .newOption #addMultiOptions {
+      margin: 2em 6em 2em 0;
+      float: right;
+      padding: 0.5em 1em;
+      background-color: brown;
+      color: white;
+      box-shadow: none; }
+  .setup .startPoll, .estimate-an .startPoll, .result .startPoll {
+    border-radius: 5px;
+    margin: 1em 6em 2em 0;
+    float: right;
+    padding: 0.5em 1em;
+    background-color: brown;
+    color: white;
+    box-shadow: none; }
+  .setup table tr .pollQuestionTitle, .estimate-an table tr .pollQuestionTitle, .result table tr .pollQuestionTitle {
+    padding: 1em; }
+  .setup table tr .pollQuestion, .estimate-an table tr .pollQuestion, .result table tr .pollQuestion {
+    border: none;
+    background-color: white;
+    box-shadow: 2px 2px 5px #888888;
+    color: black; }
+  .setup table tr td input, .estimate-an table tr td input, .result table tr td input {
+    margin: 2em 6em 2em 0;
+    padding: 0.5em 1em;
+    background-color: brown;
+    color: white;
+    box-shadow: none; }
+
+.group-button-left, .group-button-right {
+  position: absolute;
+  top: 16em;
+  position: absolute;
+  padding: 1em 2em;
+  background-color: #23BA85;
+  border-radius: 2px;
+  font-size: 2em;
+  margin-right: 1em;
+  color: white;
+  overflow: hidden; }
+
+.group-button-left {
+  left: 20%; }
+
+.group-button-right {
+  right: 20%; }
+
+.group-button-left:hover:after, .group-button-right:hover:after {
+  background: #333;
+  content: "";
+  height: 400px;
+  right: -20px;
+  opacity: .8;
+  position: absolute;
+  top: -200px;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  animation-name: group-button-left-run;
+  animation-duration: 0.7s;
+  width: 300px;
+  z-index: -10;
+  animation-timing-function: ease; }
+
+@keyframes group-button-left-run {
+  from {
+    right: 150px;
+    top: -200px; }
+  to {
+    right: -20px;
+    top: -200px; } }
+.group-button-left:hover, .group-button-right:hover {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
+
+/*# sourceMappingURL=ahp_styles.css.map */

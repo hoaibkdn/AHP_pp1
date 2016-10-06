@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>AHP</title>
+	<meta name="viewport" content="width=device-width">
+	
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<link rel="stylesheet" type="text/css" href="css/ahp_styles.css" />
+	
+	<script type="text/javascript" src="js/jquery-1.2.6.js"></script>
+	<script type="text/javascript" src="js/ahpCalc.obj.js"></script>
+	<script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+	<div class="container">
+        <div class="col-md-8 col-md-offset-2">
+            
+                <!-- poll setup-->
+            <div class="setup">
+                <h1>AHP</h1>
+                <div class="break-line-title"></div>
+                <!-- question text -->
+                <fieldset>
+                    <legend>Câu hỏi</legend>
+                    <label>Câu hỏi để hỗ trợ việc so sánh</label>
+                    <input type="text" class="questionTextInput form-control" style="width: 40em;"/>
+                </fieldset>
+
+                <!-- option list -->
+                <fieldset>
+                    <legend>Lựa chọn</legend>
+                    <table id="optionsList" ></table>
+                    <!-- add an option -->
+                    
+                    <!-- add multiple options -->
+                    <div class="newOption">
+                        <label>Trả lời những lựa chon của bạn, sau đó bấm <strong>Thêm</strong></label><br />
+                        <textarea rows="10" id="multiOptionText" style="width: 40em;"></textarea><br />
+                        <input type="button" id="addMultiOptions" value="Thêm" />
+                    </div>
+                </fieldset>
+                <div>
+                    <input type="button" class="startPoll" value="Start" />
+                    <input type="button" class="stopPoll" style="display:none;" value="Stop" />
+                    <input type="button" class="changePoll" style="display:none;" value="Retry with New Options" />
+                </div>
+            </div>
+
+            <!-- start,stop, retry buttons -->
+
+            <!-- poll questions -->
+            <div id="pollQuestions" class="estimate-an" style="display:none;">
+                <!-- displlay poll pair -->
+                <h2>Trả lời câu hỏi theo mức độ tương đối</h2>
+
+                <table>
+                    <tr>
+                        <td class="pollQuestionTitle" colspan="3"><span class="questionTextDisplay">Question</span></td>
+                    </tr>
+                    <tr>
+                        <td class="pollQuestion" id="pollQuestion1">&nbsp;</td>
+                        <td />
+                        <td class="pollQuestion" id="pollQuestion2">&nbsp;</td>
+                    </tr>
+
+                    <!-- Simple voting buttons -->
+                    <tr class="simplePollButtons">
+                        <td>
+                            <input type="button" id="L_MuchMore" value="&lt;&lt;&nbsp;Much More" />
+                            <input type="button" id="L_SlightlyMore" value="&lt;&nbsp;Slightly More" />
+                        </td>
+                        <td>
+                            <input type="button" class="pollVoteLink" id="L_R_Same" value="Same" />
+                        </td>
+                        <td>
+                            <input type="button" id="R_SlightlyMore" value="Slightly More&nbsp;&gt;" />
+                            <input type="button" id="R_MuchMore" value="Much More&nbsp;&gt;&gt;" />
+                        </td>
+                    </tr>
+
+                    <!-- Detailed voting buttons -->
+                    <tr class="detailedPollButtons">
+                        <td>
+                            <input type="button" class="leftMore" value="10" />
+                            <input type="button" class="leftMore" value="9" />
+                            <input type="button" class="leftMore" value="8" />
+                            <input type="button" class="leftMore" value="7" />
+                            <input type="button" class="leftMore" value="6" />
+                            <input type="button" class="leftMore" value="5" />
+                            <input type="button" class="leftMore" value="4" />
+                            <input type="button" class="leftMore" value="3" />
+                            <input type="button" class="leftMore" value="2" />
+                        </td>
+                        <td>
+                            <input type="button" class="same" value="1" />
+                        </td>
+                        <td>
+                            <input type="button" class="rightMore" value="2" />
+                            <input type="button" class="rightMore" value="3" />
+                            <input type="button" class="rightMore" value="4" />
+                            <input type="button" class="rightMore" value="5" />
+                            <input type="button" class="rightMore" value="6" />
+                            <input type="button" class="rightMore" value="7" />
+                            <input type="button" class="rightMore" value="8" />
+                            <input type="button" class="rightMore" value="9" />
+                            <input type="button" class="rightMore" value="10" />
+                        </td>
+                    </tr>
+                </table>
+                <span class="questionIndex">0</span>
+            </div>
+
+            <!-- results -->
+            <div id="pollResults" class="result">
+                <h3>Kết quả</h3>
+                <div class="break-line-title"></div>
+            </div>
+        </div>
+		
+	</div>
+</body>
+</html>
